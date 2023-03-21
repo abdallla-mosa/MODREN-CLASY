@@ -1,0 +1,481 @@
+/* google fonts */
+
+/* josefine  sans font */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,500;1,600&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+/* popins font */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,500;1,600&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+/* resily */
+@import url('https://fonts.cdnfonts.com/css/riesling');
+
+/* my variablse */
+:root {
+	--light_gray: #d9d9d9;
+	--limed_Oak: #AA8B56;
+	--dark_jungle_green: #1e1e1e;
+	--small: 1.125rem;
+	--medium: 2rem;
+	--large: 3.75rem;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	position: relative;
+	font-weight: normal;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	background: white;
+	transition: color 0.5s;
+	line-height: 1.6;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+section {
+	margin-top: 120px !important;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none !important;
+	color: var(--dark_jungle_green) !important;
+	text-transform: capitalize;
+}
+
+li {
+	list-style: none;
+}
+
+/* header */
+header {
+	width: 100%;
+	background-color: #fff;
+}
+
+.navbar .brand {
+	position: relative;
+	width: 150px;
+}
+
+/* .navbar .brand::after,
+.navbar .brand::before {
+	content: '';
+	min-width: 100%;
+	height: 4px;
+	background-color: var(--limed_Oak);
+	position: absolute;
+} */
+
+.navbar .brand::after {
+	left: 0;
+	bottom: 7px;
+}
+
+.navbar .brand::before {
+	top: 0;
+}
+
+nav {
+	padding: 0 15px;
+	margin-left: auto;
+}
+
+nav ul {
+	position: relative;
+}
+nav ul li {
+margin-left: 40px;
+}
+
+nav a {
+	color: var(--limed_Oak) !important;
+	font-size: 20px !important;
+	position: relative;
+
+	text-align: center;
+	line-height:100%;
+	font-weight: 500;
+}
+
+nav a:hover {
+	color: var(--dark_jungle_green) !important;
+}
+nav a:hover::after {
+	content: '';
+	display: block;
+	width: 80%;
+	height: 3px;
+ left: 50%;
+	transform: translate(-50%);
+	position: absolute;
+	transition: .8 ease-in;
+	background-color: var(--dark_jungle_green);
+}
+/* navbar on talblete screen */
+@media(max-width:998px){
+	nav a:hover::after {
+		width: 20%;
+		left: 50%;
+		top: 100%;
+		transform: translate(-50%);
+	}
+}
+/* home */
+.home {
+	width: 100%;
+	min-height: 100vh;
+	background-image: url("./Image/Home\ page\ First\ Pic.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.home .wrapper {
+	min-height: 100vh;
+}
+
+.home .wrapper .textContent {
+	background-color: #d9d9d985;
+	padding: 30px 35px;
+	text-transform: capitalize;
+	font-weight: bold;
+}
+
+.home .wrapper .textContent h1 {
+	font-family: 'Riesling', sans-serif;
+	color: var(--dark_jungle_green);
+	font-size: 96px;
+	font-weight: 400;
+}
+
+.home .wrapper .textContent p {
+	font-size: 32px;
+	color: #1E1E1E;
+}
+
+/* home page  deign in small screens  */
+@media (max-width:998px) {
+	.home .wrapper .textContent h1 {
+		font-size: 70px;
+	}
+	.home .wrapper .textContent p{
+		font-size: 20px;
+	}
+}
+
+@media (max-width:767px) {
+	.home .wrapper .textContent {
+		width: 90%;
+	}
+
+	.home .wrapper .textContent h1 {
+		font-size:50px;
+	}
+
+	.home .wrapper .textContent p {
+		font-size: var(--small);
+	}
+}
+@media (max-width:650px) {
+	.home .wrapper .textContent h1 {
+		font-size: 30px;
+}
+	}
+/* why Us   */
+.whyUs h2 {
+	text-align: center;
+}
+
+.whyUs .cards {
+	background-color: #ccc;
+	padding: 40px 0;
+	margin: 30px 0 0 0;
+}
+
+.whyUs .holder img {
+	width: 60px;
+	height: 60px;
+	align-self: center;
+}
+
+.whyUs .holder .card {
+	background-color: inherit;
+	padding: 10px;
+	border: none;
+}
+
+/* why us mobile screen design  */
+
+@media(max-width:767px) {
+	.whyUs .cards .container .holder {
+		justify-content: center;
+	}
+
+	.whyUs .holder .card {
+		text-align: center;
+		width: 100% !important;
+	}
+}
+
+/* services */
+.fillters_btns button {
+	background-color: #d9d9d985;
+	font-size: var(--small);
+	border-radius: 20px;
+}
+
+.fillters_btns button.active {
+	background-color: var(--limed_Oak);
+	color: #fff;
+}
+
+.fillters_btns button:hover {
+	background-color: var(--limed_Oak);
+	color: #fff;
+}
+
+.gallary {
+	margin: 70px 0;
+}
+
+.gallary>div {
+	margin-top: 30px;
+}
+
+.img_box {
+	position: relative;
+	width: 100%;
+}
+
+.img_box a {
+	width: 100%;
+	background-color: #d9d9d985;
+	position: absolute;
+	align-self: center;
+	padding: 10px;
+	font-size: var(--medium);
+	cursor: pointer;
+}
+
+/*services  testMonialse  */
+.testMonialse {
+	background-color: #d9d9d985;
+	padding: 20px 10px;
+	text-align: left;
+}
+
+.testMonialse_tilte h2 {
+	text-transform: lowercase !important;
+}
+
+.testMonialse_tilte h2 span {
+	color: var(--limed_Oak);
+}
+
+.testMonialse div .card {
+	padding: 10px;
+	border: none;
+	box-shadow: 4px 4px 6px #ccc, -3px -3px 10px #ccc;
+}
+
+.testMonialse div .card .img_box {
+	width: 60px;
+	height: 60px;
+}
+
+.testMonialse div .card .img_box>img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.testMonialse div .card p {
+	color: #A9A9A9;
+}
+
+.testMonialse div .card .customer_name h2 {
+	color: var(--limed_Oak);
+}
+
+/* services design in small screen  */
+@media(max-width:767px) {
+	.gallary {
+		overflow: hidden;
+		margin: 0 !important;
+	}
+
+	.fillters_btns button {
+		font-size: 14px;
+		padding: 5px !important;
+	}
+
+	@media (max-width:450px) {
+		.fillters_btns button {
+			font-size: 11px;
+		}
+	}
+
+	/*services => text monilase */
+	.testMonialse div .card .customer_name h2 {
+		font-size: 1.3rem;
+	}
+}
+
+/* contact us section  */
+.contact {
+	flex-direction: column;
+}
+
+.intro {
+	width: 60%;
+	align-self: center;
+	margin: 40px 0;
+}
+
+.contact .content {
+	padding: 50px 0;
+	background-image: url('./Image/Home\ page\ First\ Pic-2.png');
+	background-size: cover;
+}
+
+.contact .content .col_left {
+	background: rgba(255, 251, 251, 0.75);
+}
+
+#contactForm {
+	border-radius: 21px;
+	padding: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+	background-color: inherit;
+	border: 1px solid #000000;
+}
+
+.contact .form div .submitBtn {
+	width: 169px;
+	background-color: var(--limed_Oak);
+	color: white;
+	font-family: 'Josefin Sans';
+	font-size: 22px;
+	align-self: center;
+	border-radius: 50px;
+}
+
+.contact .form div div .location_info {
+	color: black;
+}
+
+.contact .form div div .location_info h3 {
+	font-weight: 600;
+	font-size: 25px;
+}
+
+.contact .form div div .location_info h4 {
+	color: var(--limed_Oak);
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 38px
+}
+
+.links {
+	padding: 0 !important;
+}
+
+.links a {
+	width: 50px;
+}
+
+.links a:nth-child(1) {
+	margin-right: 30px;
+}
+
+.links a i {
+	font-size: 2.3rem;
+}
+
+.links a:nth-child(1) i {
+	color: blue;
+}
+
+.links a:nth-child(2) i {
+	color: rgb(27, 213, 27);
+	margin-left: 40px;
+	border-radius: 50%;
+}
+
+/* contact section in small screens */
+@media(min-width:767px) {
+	.contact .content .col_left {
+		margin-right: 60px;
+		margin-bottom: 30px;
+	}
+}
+
+@media only screen and (min-width:550px) and (max-width:767px) {
+	.contact .intro {
+		width: 77%;
+	}
+}
+
+/* footer the end of evrything */
+footer {
+	width: 100%;
+	background-image: url('./Image/pexels-houzlook-com-3356416.png');
+	background-position-x: right;
+	padding: 15px;
+	color: white;
+}
+
+footer #brand {
+	position: relative;
+	font-size: var(--medium);
+	color: var(--limed_Oak) !important;
+	font-family: 'Riesling', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 50px;
+	padding: 7px;
+}
+
+footer #brand::after,
+.footer #brand::before {
+	content: '';
+	width: 100%;
+	height: 4px;
+	background-color: var(--limed_Oak);
+	position: absolute;
+}
+
+.footer #brand::before {
+	top: 0;
+}
+
+.footer #brand::after {
+	left: 0;
+	bottom: 0;
+}
+
+/* footer in small screens */
+@media(max-width:767px) {
+	footer #brand {
+		width: 150px;
+		height: 50px;
+		font-size: 20px;
+		margin-bottom: 30px;
+	}
+
+	footer #brand::after,
+	.footer #brand::before {
+		width: 90% !important;
+	}
+}
